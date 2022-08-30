@@ -17,17 +17,29 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 
 public class ArrayPassing {
+
+    //////////////////////////////////////////////////////////////////////////////
+    //  main class
     public static void main(String[] args){
+
+        //  declare our vars
         int[] licensePlates = new int[10];
 
+        //  get inputs from the user
         getPlates(licensePlates);
+
+        //  show the license plates received as input
         System.out.println("Licenses entered (unsorted): ");
         showPlates(licensePlates);
+
+        //  sort the license plates then show them
         licensePlates = sortTheArrays(licensePlates);
         System.out.println("Licenses entered (sorted): ");
         showPlates(licensePlates);
     }
+    //////////////////////////////////////////////////////////////////////////////
 
+    //////////////////////////////////////////////////////////////////////////////
     //  method for getting license plates
     public static void getPlates(int[] licensePlateHolder){
         Scanner userInput = new Scanner(System.in);
@@ -66,6 +78,7 @@ public class ArrayPassing {
         Arrays.sort(licensePlateHolder);
         return  licensePlateHolder;
     }
+    //////////////////////////////////////////////////////////////////////////////
 
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
