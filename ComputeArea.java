@@ -27,6 +27,8 @@ public class ComputeArea {
         // declare the vars we need
         double  area,
                 radius = 0.00;
+
+        //  declare PI as a constant as this value wi
         final double PI = 3.14159;
 
         boolean again = true;
