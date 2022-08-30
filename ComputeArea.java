@@ -56,7 +56,7 @@ public class ComputeArea {
                 if (radius > 0 ){
 
                     // find the area of the circle
-                    area = radius * radius * PI;
+                    area = Math.pow(radius,2) * PI;
 
                     // show the resulting area
                     System.out.println("The area of the circle of radius " + radius + " is " + area +".");
