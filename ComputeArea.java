@@ -70,7 +70,7 @@ public class ComputeArea {
                 anotherRun = userInput.next().charAt(0);
 
                 //  response is not y/n, spit out an error message
-                if ("yn".indexOf(anotherRun) == -1) {
+                if ("ynYN".indexOf(anotherRun) == -1) {
                     System.out.println("Invalid response!");
                 }
                 //  response is valid, exit the loop
