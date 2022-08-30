@@ -12,6 +12,7 @@
 //  for this apps functionality
 
 //  for inputs
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 //  character functions
@@ -25,6 +26,7 @@ public class ComputeArea {
 
         // declare the vars we need
         double  area,
+                radius = 0.00,
                 PI = 3.14159;
 
         boolean again = true;
@@ -44,22 +46,28 @@ public class ComputeArea {
             //  prompt for input
             System.out.print("Enter a value for the radius: ");
 
-            //  get user input
-            double radius = radiusInput.nextDouble();
+            //  create an exception clause to address bad input data
+            try{
+                //  get user input
+                 radius = radiusInput.nextDouble();
+                //  only do the math if radius > 0
+                if (radius > 0 ){
 
-            //  only do the math if radius > 0
-            if (radius > 0 ){
+                    // find the area of the circle
+                    area = radius * radius * PI;
 
-                // find the area of the circle
-                area = radius * radius * PI;
-
-                // show the resulting area
-                System.out.println("The area of the circle of radius " + radius + " is " + area +".");
+                    // show the resulting area
+                    System.out.println("The area of the circle of radius " + radius + " is " + area +".");
+                }
+                //  radius is < 0, spit out an error message
+                else {
+                    System.out.println("This program requires a value > 0 for radius.");
+                }
+            } catch (InputMismatchException ex) {
+                System.out.println("Data type mismatch error!");
+                System.out.println("A double is required!");
             }
-            //  radius is < 0, spit out an error message
-            else {
-                System.out.println("This program requires a value > 0 for radius.");
-            }
+
 
             //  ask if the user wants to run the app again
             while (!validYN) {
