@@ -8,6 +8,7 @@ public class TestLoan {
         System.out.println("Monthly payment: " + esperoLoan.getMonthlyPayment());
         System.out.println("Months to pay: " + esperoLoan.getMonthsToPay());
         System.out.println("Total amount: " + esperoLoan.getTotalPayment());
+        System.out.println("Date created: " + esperoLoan.getLoanDate().toString());
         System.out.println("Borrowers: " + esperoLoan.getLoanCounter());
     }
 }

@@ -15,6 +15,7 @@ public class Loan {
         this.interestRate = interestRate;
         this.monthsToPay = monthsToPay;
         this.principal = principal;
+        loanDate = new java.util.Date();
         loanCounter++;
     }
 
